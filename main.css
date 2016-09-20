@@ -1,3 +1,9 @@
+body {
+	font-family: helvetica;
+	color: white;
+	background: #ff33cc;
+}
+
 h1 {
 	color: rgba(000, 150, 255, 1);
 	font-size: 18px;
@@ -9,25 +15,26 @@ h2 {
 .board {
 	display: inline-block;
 	height: 50%;
-	width:50%;
+	width:100%;
 }
 .card {
-	height: 200px;
+	height: 150px;
 	width: 150px;
 	border-style: solid;
-	border-color: black;
+	border-color: rgba(255,255,255, 1);
 	border-width: 1px;
-	border-radius: 10px;
+	border-radius: 0px;
 	background: yellow;
 	float: left;
-	margin:8%;
+	margin:1%;
+	box-shadow: 0px 0px 0px 8px rgba(255,255,255,0.3);
 
 }
 .name {
 	color:#ff0000;
 }
 nav {
-	background: #808080;
+	background: #ff33cc;
 
 }
 nav a {

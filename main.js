@@ -25,6 +25,15 @@ var isTwoCards = function () {
 	if (cardsInPlay.length === 2){
 		isMatch(cardsInPlay);
 		cardsInPlay =[];
+		document.getElementsByClassName("card").innerHTML = "";
+	}
+};
+
+var picture = function () {
+	if (this.getAttribute('data-card') === "king"){
+		this.innerHTML = '<img src = "playing-card-110298_640.jpg", alt = "king card"/>';
+	} else if (this.getAttribute('data-card') === "queen"){
+		this.innerHTML = '<img src = "playing-card-110300_640.jpg", alt = "queen card"/>';
 	}
 };
 
@@ -33,12 +42,14 @@ createBoard = function (){
 	var newCard = document.createElement('div');
 	newCard.className= "card";
 	newCard.setAttribute('data-card', cards[i]);
+	newCard.addEventListener('click', picture);
 	newCard.addEventListener('click', isTwoCards);
 	document.getElementsByClassName('board')[0].appendChild(newCard);
 
 	}
 };
 
-
 createBoard();
+
+
 
