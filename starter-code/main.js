@@ -25,13 +25,14 @@ var isTwoCards = function () {
 	if (cardsInPlay.length === 2){
 		isMatch(cardsInPlay);
 		cardsInPlay =[];
-		document.getElementsByClassName("card").innerHTML = "";
+		document.getElementsByClassName("card").innerHTML =" ";
+		
 	}
 };
 
 var picture = function () {
 	if (this.getAttribute('data-card') === "king"){
-		this.innerHTML = '<img src = "playing-card-110298_640.jpg", alt = "king card"/>';
+		this.innerHTML ='<img src = "playing-card-110298_640.jpg", alt = "king card"/>';
 	} else if (this.getAttribute('data-card') === "queen"){
 		this.innerHTML = '<img src = "playing-card-110300_640.jpg", alt = "queen card"/>';
 	}
